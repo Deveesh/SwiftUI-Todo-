@@ -14,6 +14,13 @@
 		5F228B4D2CA17E25009ABC6F /* SwiftUI_TodoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F228B4C2CA17E25009ABC6F /* SwiftUI_TodoAppTests.swift */; };
 		5F228B572CA17E25009ABC6F /* SwiftUI_TodoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F228B562CA17E25009ABC6F /* SwiftUI_TodoAppUITests.swift */; };
 		5F228B592CA17E25009ABC6F /* SwiftUI_TodoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F228B582CA17E25009ABC6F /* SwiftUI_TodoAppUITestsLaunchTests.swift */; };
+		5F228B692CA1802C009ABC6F /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F228B682CA1802C009ABC6F /* UserDataModel.swift */; };
+		5F228B6B2CA18047009ABC6F /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F228B6A2CA18047009ABC6F /* ListModel.swift */; };
+		5F228B6D2CA1805F009ABC6F /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F228B6C2CA1805F009ABC6F /* TaskModel.swift */; };
+		5F228B702CA180A6009ABC6F /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F228B6F2CA180A6009ABC6F /* TaskView.swift */; };
+		5F228B722CA1825D009ABC6F /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F228B712CA1825D009ABC6F /* ListView.swift */; };
+		5F228B742CA19C51009ABC6F /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F228B732CA19C51009ABC6F /* HomePageView.swift */; };
+		5F228B772CA19F2A009ABC6F /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F228B762CA19F2A009ABC6F /* MockData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,13 @@
 		5F228B522CA17E25009ABC6F /* SwiftUI TodoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftUI TodoAppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F228B562CA17E25009ABC6F /* SwiftUI_TodoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_TodoAppUITests.swift; sourceTree = "<group>"; };
 		5F228B582CA17E25009ABC6F /* SwiftUI_TodoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_TodoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5F228B682CA1802C009ABC6F /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
+		5F228B6A2CA18047009ABC6F /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		5F228B6C2CA1805F009ABC6F /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		5F228B6F2CA180A6009ABC6F /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		5F228B712CA1825D009ABC6F /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		5F228B732CA19C51009ABC6F /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		5F228B762CA19F2A009ABC6F /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +108,14 @@
 		5F228B3A2CA17E21009ABC6F /* SwiftUI TodoApp */ = {
 			isa = PBXGroup;
 			children = (
+				5F228B752CA19F22009ABC6F /* Mocks */,
+				5F228B6E2CA18091009ABC6F /* Components */,
+				5F228B652CA17FE2009ABC6F /* Models */,
 				5F228B3B2CA17E21009ABC6F /* SwiftUI_TodoAppApp.swift */,
 				5F228B3D2CA17E21009ABC6F /* ContentView.swift */,
 				5F228B3F2CA17E25009ABC6F /* Assets.xcassets */,
 				5F228B412CA17E25009ABC6F /* Preview Content */,
+				5F228B732CA19C51009ABC6F /* HomePageView.swift */,
 			);
 			path = "SwiftUI TodoApp";
 			sourceTree = "<group>";
@@ -125,6 +143,33 @@
 				5F228B582CA17E25009ABC6F /* SwiftUI_TodoAppUITestsLaunchTests.swift */,
 			);
 			path = "SwiftUI TodoAppUITests";
+			sourceTree = "<group>";
+		};
+		5F228B652CA17FE2009ABC6F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5F228B682CA1802C009ABC6F /* UserDataModel.swift */,
+				5F228B6A2CA18047009ABC6F /* ListModel.swift */,
+				5F228B6C2CA1805F009ABC6F /* TaskModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5F228B6E2CA18091009ABC6F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5F228B6F2CA180A6009ABC6F /* TaskView.swift */,
+				5F228B712CA1825D009ABC6F /* ListView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5F228B752CA19F22009ABC6F /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				5F228B762CA19F2A009ABC6F /* MockData.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +302,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F228B692CA1802C009ABC6F /* UserDataModel.swift in Sources */,
 				5F228B3E2CA17E21009ABC6F /* ContentView.swift in Sources */,
+				5F228B6D2CA1805F009ABC6F /* TaskModel.swift in Sources */,
+				5F228B722CA1825D009ABC6F /* ListView.swift in Sources */,
+				5F228B772CA19F2A009ABC6F /* MockData.swift in Sources */,
+				5F228B702CA180A6009ABC6F /* TaskView.swift in Sources */,
 				5F228B3C2CA17E21009ABC6F /* SwiftUI_TodoAppApp.swift in Sources */,
+				5F228B742CA19C51009ABC6F /* HomePageView.swift in Sources */,
+				5F228B6B2CA18047009ABC6F /* ListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
