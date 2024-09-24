@@ -11,27 +11,36 @@ struct ListView: View {
     var listModel: ListModel
     
     var body: some View {
-        List {
+        VStack(alignment: .leading) {
             Text(
                 listModel.name
-            ).listRowSeparator(.hidden)
+            )
+            .listRowSeparator(.hidden)
+            .font(.title)
+            .fontWeight(.semibold)
             
-            ForEach(
-                listModel.tasks,
-                id: \.id
-            ) { task in
-                TaskView(
-                    taskModel: task
-                )
-            }.listRowSeparator(.hidden)
+            List {
+                ForEach(
+                    listModel.tasks,
+                    id: \.id
+                ) { task in
+                    TaskView(
+                        taskModel: task
+                    )
+                }.listRowSeparator(.hidden)
+                    
+                
+            }.listStyle(PlainListStyle())
             
-        }
+        }.padding()
     }
 }
 
 #Preview {
     var listMode = MockData()
-    return ListView(
-        listModel: listMode.lists
-    )
+    return NavigationStack {
+        ListView(
+            listModel: listMode.lists
+        ).navigationTitle("Todo list")
+    }
 }

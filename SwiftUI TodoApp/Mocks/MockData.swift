@@ -8,7 +8,7 @@
 import Foundation
 
 struct MockData {
-    lazy var userData = UserDataModel(lists: [lists, lists])
+    lazy var userData = UserDataModel(list: lists)
     
     lazy var lists = ListModel(name: "List1", tasks: tasks)
     

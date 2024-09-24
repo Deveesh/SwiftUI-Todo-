@@ -8,5 +8,5 @@
 import Foundation
 
 struct UserDataModel {
-    let lists : [ListModel]
+    var list = ListModel(name: "Your first list", tasks: [])
 }

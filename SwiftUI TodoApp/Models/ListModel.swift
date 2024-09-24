@@ -10,5 +10,5 @@ import Foundation
 struct ListModel: Identifiable {
     let id = UUID().uuidString
     let name: String
-    let tasks: [TaskModel]
+    var tasks: [TaskModel]
 }

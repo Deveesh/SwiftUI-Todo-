@@ -41,7 +41,7 @@ extension TaskView {
                 )
             case .notCompleted:
                 Color.gray.opacity(
-                    0.7
+                    0.2
                 )
             }
     }
@@ -49,7 +49,12 @@ extension TaskView {
 
 #Preview {
     var userData = MockData()
-    return TaskView(
-        taskModel: userData.tasks[0]
-    )
+    return Group {
+        TaskView(
+            taskModel: userData.tasks[0]
+        )
+        TaskView(
+            taskModel: userData.tasks[1]
+        )
+    }
 }
